@@ -230,6 +230,92 @@ but not<figure class="highlight py"><table><tr><td class="gutter"><pre><span cla
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/14/100py/Sec11/" class="post-title-link" itemprop="url">Sec11:Blackjack Capstone Project</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-10-14 17:10:01 / Modified: 17:36:20" itemprop="dateCreated datePublished" datetime="2024-10-14T17:10:01+08:00">2024-10-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Blackjack-Capstone-Project"><a href="#Blackjack-Capstone-Project" class="headerlink" title="Blackjack Capstone Project"></a>Blackjack Capstone Project</h1><h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><ol>
+<li>.append<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">my_list.append = <span class="string">&quot;something else&quot;</span>  <span class="comment"># 错误：你不能重新赋值给 `append` 方法</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">my_list.append(<span class="number">4</span>)  <span class="comment"># 正确：这样可以正常添加元素</span></span><br></pre></td></tr></table></figure></li>
+<li>to summary all elements in a list<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">total = <span class="built_in">sum</span>(my_list)</span><br><span class="line"><span class="built_in">print</span>(total)  <span class="comment">#  15</span></span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Returns a random card from the deck&quot;&quot;&quot;</span></span><br><span class="line">    cards = [<span class="number">11</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>]</span><br><span class="line">    card = random.choice(cards)</span><br><span class="line">    <span class="keyword">return</span> card <span class="comment"># Herezzzzzz</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>Wrong way:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line">    random.choice(cards)</span><br><span class="line">    <span class="keyword">return</span> <span class="comment"># Here.</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h3><ol>
+<li>put repeat steps into a “def”</li>
+<li>use “range” in “for”<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">    user_cards.append(deal_card())</span><br><span class="line">    computer_cards.append(deal_card())</span><br></pre></td></tr></table></figure></li>
+<li>Make complex steps or repeat in a huge def into pieces of defs.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_score</span>(<span class="params">cards</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compare</span>(<span class="params">u_score, c_score</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">play_game</span>():</span><br></pre></td></tr></table></figure></li>
+<li>When restarting the game, clear the cards of last game.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">play</span>():</span><br><span class="line">    user_cards.clear()</span><br><span class="line">    AI_cards.clear()</span><br><span class="line">    ....</span><br></pre></td></tr></table></figure></li>
+<li>The better way to clear:</li>
+</ol>
+<p><strong>os.system(‘clear’)</strong><br>6. </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -380,92 +466,6 @@ but not<figure class="highlight py"><table><tr><td class="gutter"><pre><span cla
 </li>
 </ol>
 <h3 id=""><a href="#" class="headerlink" title=""></a></h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/14/100py/Sec11/" class="post-title-link" itemprop="url">Sec11:Blackjack Capstone Project</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-10-14 17:10:01 / Modified: 17:36:20" itemprop="dateCreated datePublished" datetime="2024-10-14T17:10:01+08:00">2024-10-14</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Blackjack-Capstone-Project"><a href="#Blackjack-Capstone-Project" class="headerlink" title="Blackjack Capstone Project"></a>Blackjack Capstone Project</h1><h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><ol>
-<li>.append<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">my_list.append = <span class="string">&quot;something else&quot;</span>  <span class="comment"># 错误：你不能重新赋值给 `append` 方法</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">my_list.append(<span class="number">4</span>)  <span class="comment"># 正确：这样可以正常添加元素</span></span><br></pre></td></tr></table></figure></li>
-<li>to summary all elements in a list<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">total = <span class="built_in">sum</span>(my_list)</span><br><span class="line"><span class="built_in">print</span>(total)  <span class="comment">#  15</span></span><br></pre></td></tr></table></figure></li>
-<li><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Returns a random card from the deck&quot;&quot;&quot;</span></span><br><span class="line">    cards = [<span class="number">11</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>]</span><br><span class="line">    card = random.choice(cards)</span><br><span class="line">    <span class="keyword">return</span> card <span class="comment"># Herezzzzzz</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<ul>
-<li>Wrong way:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line">    random.choice(cards)</span><br><span class="line">    <span class="keyword">return</span> <span class="comment"># Here.</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h3><ol>
-<li>put repeat steps into a “def”</li>
-<li>use “range” in “for”<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">    user_cards.append(deal_card())</span><br><span class="line">    computer_cards.append(deal_card())</span><br></pre></td></tr></table></figure></li>
-<li>Make complex steps or repeat in a huge def into pieces of defs.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">deal_card</span>():</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculate_score</span>(<span class="params">cards</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compare</span>(<span class="params">u_score, c_score</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">play_game</span>():</span><br></pre></td></tr></table></figure></li>
-<li>When restarting the game, clear the cards of last game.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">play</span>():</span><br><span class="line">    user_cards.clear()</span><br><span class="line">    AI_cards.clear()</span><br><span class="line">    ....</span><br></pre></td></tr></table></figure></li>
-<li>The better way to clear:</li>
-</ol>
-<p><strong>os.system(‘clear’)</strong><br>6. </p>
-
       
     </div>
 
