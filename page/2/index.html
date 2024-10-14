@@ -112,7 +112,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -143,7 +143,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec13/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -161,7 +161,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/14/100py/Sec13/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2024/10/14/100py/Sec8/" class="post-title-link" itemprop="url">Sec_8:Functions with Inputs</a>
         </h2>
 
         <div class="post-meta-container">
@@ -171,15 +171,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2024-10-14 17:04:13" itemprop="dateCreated datePublished" datetime="2024-10-14T17:04:13+08:00">2024-10-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-10-10 00:08:57" itemprop="dateModified" datetime="2024-10-10T00:08:57+08:00">2024-10-10</time>
+      <time title="Created: 2024-10-14 17:10:01 / Modified: 17:36:20" itemprop="dateCreated datePublished" datetime="2024-10-14T17:10:01+08:00">2024-10-14</time>
     </span>
 
   
@@ -192,8 +186,132 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h1><ol>
-<li>Try and except:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;How old are you?&quot;</span>))</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;You have typed in a an invalid number. Please try again with a numerical response such as 15.&quot;</span>)</span><br><span class="line">    age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;How old are you?&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> age &gt; <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;You can drive at age <span class="subst">&#123;age&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+          <h1 id="Functions-with-Inputs"><a href="#Functions-with-Inputs" class="headerlink" title="Functions with Inputs"></a>Functions with Inputs</h1><h2 id="Arguments-Parameters"><a href="#Arguments-Parameters" class="headerlink" title="Arguments &amp; Parameters"></a>Arguments &amp; Parameters</h2><h3 id="Functions-with-Inputs-1"><a href="#Functions-with-Inputs-1" class="headerlink" title="Functions with Inputs"></a>Functions with Inputs</h3><p>1. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello!&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Welcome!&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Have fun!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>wrong:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(greet())</span><br></pre></td></tr></table></figure>
+<p>right:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet()</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet_name</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;hello <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">greet_name(<span class="string">&quot;heji&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="Example-life-week-calculator"><a href="#Example-life-week-calculator" class="headerlink" title="Example:life week calculator"></a>Example:life week calculator</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">life_in_weeks</span>(<span class="params">age</span>):</span><br><span class="line">    age = (<span class="number">90</span> - <span class="built_in">int</span>(age)) * <span class="number">52</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;You have <span class="subst">&#123;age&#125;</span> weeks left.&quot;</span>)</span><br><span class="line">life_in_weeks(<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="more-inputs"><a href="#more-inputs" class="headerlink" title="more inputs"></a>more inputs</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet_with_name</span>(<span class="params">name,location</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Hello <span class="subst">&#123;name&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Where are you? <span class="subst">&#123;location&#125;</span>?&quot;</span>)</span><br><span class="line"></span><br><span class="line">greet_with_name(<span class="string">&quot;Jack Bauer&quot;</span>,<span class="string">&quot;NYC&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="keyword-arguments"><a href="#keyword-arguments" class="headerlink" title="keyword arguments"></a>keyword arguments</h4><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greet_with_name(name =<span class="string">&quot;Schumann&quot;</span>,location =<span class="string">&quot;CD&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="optimize"><a href="#optimize" class="headerlink" title="optimize"></a>optimize</h4><ol>
+<li>no need to create list of input</li>
+</ol>
+<p>my initial version </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt</span>(<span class="params">original_text,<span class="number">3</span></span>):</span><br><span class="line">    list1 = <span class="built_in">list</span>(text)</span><br><span class="line">    <span class="keyword">for</span> search <span class="keyword">in</span> list1:</span><br></pre></td></tr></table></figure>
+
+<p>should be <strong>(search in input str but not alphabet)</strong></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> search <span class="keyword">in</span> original_text:</span><br><span class="line">    <span class="keyword">if</span> search <span class="keyword">in</span> alphabet:</span><br><span class="line">        old_index = alphabet.index(search)</span><br><span class="line">        new_index = (old_index +shift)%<span class="built_in">len</span>(alphabet)</span><br><span class="line">        new_char = alphabet[new_index]</span><br><span class="line">        new_text += new_char</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>make sure after +3,still in alphabet(0,25). (hard to come up with at first) <em>MODULO</em> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_index = (old_index + shift_amount) % <span class="built_in">len</span>(alphabet)</span><br></pre></td></tr></table></figure></li>
+<li>during the project we’d better use mark “#” to make our lines readable and intelligible</li>
+<li>keyword arguments<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encrypt(original_text=text, shift_amount=shift)</span><br></pre></td></tr></table></figure></li>
+<li>lead “def” 3 to 1 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">caesar</span>(<span class="params">original_text, shift_amount, operation</span>):</span><br><span class="line">    result_text = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> original_text:</span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">in</span> alphabet:</span><br><span class="line">            position = alphabet.index(letter)</span><br><span class="line">            <span class="keyword">if</span> operation == <span class="string">&quot;encode&quot;</span>:</span><br><span class="line">                new_position = (position + shift_amount) % <span class="built_in">len</span>(alphabet)</span><br><span class="line">            <span class="keyword">elif</span> operation == <span class="string">&quot;decode&quot;</span>:</span><br><span class="line">                new_position = (position - shift_amount) % <span class="built_in">len</span>(alphabet)</span><br><span class="line">            result_text += alphabet[new_position]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result_text += letter  <span class="comment"># Keep non-alphabet characters unchanged</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Here is the <span class="subst">&#123;operation&#125;</span>d result: <span class="subst">&#123;result_text&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">caesar(text, shift, direction)</span><br></pre></td></tr></table></figure></li>
+<li>isalpha()<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> letter.isalpha():</span><br></pre></td></tr></table></figure></li>
+<li>globle variable<br>在函数 caesar(  ) 中，restart 是一个全局变量，但你在函数内部试图修改它时，Python 并不会自动认为你想修改全局变量，除非你明确地使用 global 关键字。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">caesar</span>(<span class="params">original_text, shift_amount, encode_or_decode</span>):</span><br><span class="line">    <span class="keyword">global</span> restart</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">if</span> user_choice == <span class="string">&quot;yes&quot;</span>:</span><br><span class="line">        restart = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> user_choice ==<span class="string">&quot;no&quot;</span>:</span><br><span class="line">        restart = <span class="literal">False</span></span><br><span class="line"><span class="keyword">while</span> restart == <span class="literal">True</span>:</span><br><span class="line">    direction = <span class="built_in">input</span>(<span class="string">&quot;Type &#x27;encode&#x27; to encrypt, type &#x27;decode&#x27; to decrypt:\n&quot;</span>).lower()</span><br><span class="line">    text = <span class="built_in">input</span>(<span class="string">&quot;Type your message:\n&quot;</span>).lower()</span><br><span class="line">    shift = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;Type the shift number:\n&quot;</span>))</span><br><span class="line"></span><br><span class="line">    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> restart == <span class="literal">False</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;bye bye&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>or except the globle variable(not in “def caesar” )<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">should_continue = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> should_continue:</span><br><span class="line"></span><br><span class="line">    direction = <span class="built_in">input</span>(<span class="string">&quot;Type &#x27;encode&#x27; to encrypt, type &#x27;decode&#x27; to decrypt:\n&quot;</span>).lower()</span><br><span class="line">    text = <span class="built_in">input</span>(<span class="string">&quot;Type your message:\n&quot;</span>).lower()</span><br><span class="line">    shift = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;Type the shift number:\n&quot;</span>))</span><br><span class="line"></span><br><span class="line">    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)</span><br><span class="line"></span><br><span class="line">    restart = <span class="built_in">input</span>(<span class="string">&quot;Type &#x27;yes&#x27; if you want to go again. Otherwise, type &#x27;no&#x27;.\n&quot;</span>).lower()</span><br><span class="line">    <span class="keyword">if</span> restart == <span class="string">&quot;no&quot;</span>:</span><br><span class="line">        should_continue = <span class="literal">False</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Goodbye&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/14/100py/Sec9/" class="post-title-link" itemprop="url">Sec_9:Dictionaries & Nesting</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-10-14 17:10:01 / Modified: 17:36:20" itemprop="dateCreated datePublished" datetime="2024-10-14T17:10:01+08:00">2024-10-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Dictionaries-Nesting"><a href="#Dictionaries-Nesting" class="headerlink" title="Dictionaries &amp; Nesting"></a>Dictionaries &amp; Nesting</h1><h3 id="dictionary-convention"><a href="#dictionary-convention" class="headerlink" title="dictionary convention"></a>dictionary convention</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">programming_dictionary = &#123;</span><br><span class="line">    <span class="string">&quot;Bug&quot;</span>: <span class="string">&quot;An error in a program that prevents the program from running as expected.&quot;</span>,  <span class="comment">#ident</span></span><br><span class="line">    <span class="string">&quot;Function&quot;</span>: <span class="string">&quot;A piece of code that you can easily call over and over again.&quot;</span>, <span class="comment"># comma</span></span><br><span class="line">&#125; <span class="comment">#new line    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Retrieving a value from a dictionary</span></span><br><span class="line"><span class="built_in">print</span>(programming_dictionary[<span class="string">&quot;Function&quot;</span>])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>“bug” is <em>key</em> ; “An error in a program that prevents the program from running as expected.” is <em>value</em></li>
+<li> <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> programming_dictionary:</span><br><span class="line">   <span class="built_in">print</span>(key)</span><br><span class="line">   <span class="built_in">print</span>(programming_dictionary[key])</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Nest"><a href="#Nest" class="headerlink" title="Nest"></a>Nest</h3><p>1. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    Key: [<span class="type">List</span>],</span><br><span class="line">    Key2: &#123;<span class="type">Dict</span>&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>2. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">travel_log = &#123;</span><br><span class="line">    <span class="string">&quot;France&quot;</span>: [<span class="string">&quot;Paris&quot;</span>, <span class="string">&quot;Lille&quot;</span>, <span class="string">&quot;Dijon&quot;</span>],</span><br><span class="line">    <span class="string">&quot;Germany&quot;</span>: [<span class="string">&quot;Stuttgart&quot;</span>, <span class="string">&quot;Berlin&quot;</span>],</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(travel_log[<span class="string">&quot;France&quot;</span>,<span class="number">1</span>]) <span class="comment"># wrong</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># correction</span></span><br><span class="line"><span class="built_in">print</span>(travel_log[<span class="string">&quot;France&quot;</span>][<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>3. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nested_list = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, [<span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]]</span><br><span class="line"><span class="built_in">print</span>(nested_list[<span class="number">2</span>][<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>4. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">travel_log = &#123;</span><br><span class="line">  <span class="string">&quot;France&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;cities_visited&quot;</span>: [<span class="string">&quot;Paris&quot;</span>, <span class="string">&quot;Lille&quot;</span>, <span class="string">&quot;Dijon&quot;</span>],</span><br><span class="line">    <span class="string">&quot;total_visits&quot;</span>: <span class="number">12</span></span><br><span class="line">   &#125;,</span><br><span class="line">  <span class="string">&quot;Germany&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;cities_visited&quot;</span>: [<span class="string">&quot;Berlin&quot;</span>, <span class="string">&quot;Hamburg&quot;</span>, <span class="string">&quot;Stuttgart&quot;</span>],</span><br><span class="line">    <span class="string">&quot;total_visits&quot;</span>: <span class="number">5</span></span><br><span class="line">   &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(travel_log[<span class="string">&quot;Germany&quot;</span>][<span class="string">&quot;cities_visited&quot;</span>][<span class="number">2</span>])  <span class="comment">#呼叫dict中的key时要加引号</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>Question 2:<br>Which line of code will <em>produce an error</em>?<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dict</span> = &#123;</span><br><span class="line">    <span class="string">&quot;a&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&quot;b&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="string">&quot;c&quot;</span>: <span class="number">3</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+answer<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">dict</span>[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<strong>reason</strong> : There is no key that matches 1, this will give you a KeyError. <em>Unlike with a Python List</em>, using the [1] square bracket notation on a dictionary will <strong>not</strong> retrieve the second item.</li>
+</ol>
+<h3 id="Final-project"><a href="#Final-project" class="headerlink" title="Final project"></a>Final project</h3><ol>
+<li>screen clear use:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> * <span class="number">100</span>) <span class="comment"># not &quot;n/&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>before loop,first:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bids = &#123;&#125;  <span class="comment"># to store all bids info</span></span><br><span class="line">restart = <span class="literal">True</span>  <span class="comment">#  initialize True，to enter loop</span></span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">price = <span class="built_in">input</span>(<span class="built_in">int</span>(<span class="string">&quot;What is your bid?: $&quot;</span>)) <span class="comment">#Wrong!</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">price = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;What is your bid?: $&quot;</span>))  <span class="comment">#Right!</span></span><br></pre></td></tr></table></figure></li>
+<li>first set the empty dict “bids”,after the “while” loop,<br>can use bid[…] to assign value.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bid = &#123;&#125; <span class="comment"># Here</span></span><br><span class="line"><span class="keyword">while</span> restart == <span class="literal">True</span>:</span><br><span class="line">    name = <span class="built_in">input</span>(<span class="string">&quot;What is you name?: &quot;</span>)</span><br><span class="line">    price = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;What is your bid?: $&quot;</span>))</span><br><span class="line">    choice = <span class="built_in">input</span>(<span class="string">&quot;Are there any other bidders? Type &#x27;yes or &#x27;no&#x27;. &quot;</span>).lower()</span><br><span class="line">    bid[name] = price  <span class="comment"># Here</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">highest = <span class="number">0</span>  <span class="comment"># Mention these 2 lines&#x27; &quot;define&quot;</span></span><br><span class="line">winner = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> person <span class="keyword">in</span> bid:</span><br><span class="line">    person_bids = <span class="built_in">int</span>(bid[person]) <span class="comment"># Mention tran &quot;int&quot;</span></span><br><span class="line">    <span class="keyword">if</span> person_bids &gt; highest:</span><br><span class="line">        highest = person_bids</span><br><span class="line">        winner = person</span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
