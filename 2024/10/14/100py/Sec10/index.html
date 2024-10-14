@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Functions with outputs1.  1234def function_name(f_name,l_name):    f_name.title()    l_name.title()    # Wrong  these 2 title() are useless.    print(f_name + &quot; &quot; + l_name)    12345def funct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sec10:Functions with outputs">
+<meta property="og:url" content="http://example.com/2024/10/14/100py/Sec10/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Functions with outputs1.  1234def function_name(f_name,l_name):    f_name.title()    l_name.title()    # Wrong  these 2 title() are useless.    print(f_name + &quot; &quot; + l_name)    12345def funct">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-14T09:10:01.000Z">
+<meta property="article:modified_time" content="2024-10-14T09:36:20.860Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Py100 Notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/10/14/100py/Sec10/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/10/14/100py/Sec10/","path":"2024/10/14/100py/Sec10/","title":"Sec10:Functions with outputs"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Sec10:Functions with outputs | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Functions-with-outputs"><span class="nav-number">1.</span> <span class="nav-text">Functions with outputs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.0.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Project-Leap-year-check"><span class="nav-number">1.1.</span> <span class="nav-text">2.12345678def function_1(text):    return text + textdef function_2(text):    return text.title()output &#x3D; function_2(function_1(&quot;hello&quot;))print(output)### Project:Leap year check:12345678910def is_leap_year(year):    # Write your code here.    # Don&#39;t change the function name.    if year % 4 &#x3D;&#x3D; 0 and year % 100 !&#x3D; 0:        print(True)      # Wrong! 返回None # 在函数中，print() 只是将结果输出到控制台，而不会将值返回给调用函数或程序的其他部分。函数默认返回 None，因此如果你需要在其他地方使用函数的返回值（例如赋值给变量或进一步计算），print() 就不够用了。    elif year % 400 &#x3D;&#x3D; 0:        print(True)    else:        print(False)is_leap_year(2024)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dostrings-to-explain"><span class="nav-number">1.1.1.</span> <span class="nav-text">Dostrings: to explain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Preposition"><span class="nav-number">1.1.2.</span> <span class="nav-text">Preposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-solutions"><span class="nav-number">1.1.3.</span> <span class="nav-text">2 solutions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">1.2.</span> <span class="nav-text">-123456789101112131415161718restart &#x3D; Truegoon &#x3D; Falsewhile restart &#x3D;&#x3D; True and goon &#x3D;&#x3D; False:    n1 &#x3D; float(input(&quot;What&#39;s the first number?: &quot;))    goon &#x3D; True    while goon:        choose &#x3D; input(&quot;+\n-\n*\n&#x2F;\nPick an operation: &quot;)        n2 &#x3D; float(input(&quot;What&#39;s the next number?: &quot;))        function &#x3D; calculate[choose] # Here use [] not ().        result &#x3D; function(n1,n2)        print(f&quot;{n1}{choose}{n2} &#x3D; {result}&quot;)  # Attention        go_on_or_not &#x3D; input(f&quot;Type &#39;y&#39; to continue calculating with {result}, or type &#39;n&#39; to start a new calculation: &quot;)        if go_on_or_not &#x3D;&#x3D; &quot;y&quot;:            restart &#x3D; False            goon &#x3D; True        if go_on_or_not &#x3D;&#x3D; &quot;n&quot;:            restart &#x3D; True            print(&quot;\n&quot; * 20)</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/14/100py/Sec10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Sec10:Functions with outputs | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Sec10:Functions with outputs
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-10-14 17:10:01 / Modified: 17:36:20" itemprop="dateCreated datePublished" datetime="2024-10-14T17:10:01+08:00">2024-10-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Functions-with-outputs"><a href="#Functions-with-outputs" class="headerlink" title="Functions with outputs"></a>Functions with outputs</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>1. </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function_name</span>(<span class="params">f_name,l_name</span>):</span><br><span class="line">    f_name.title()</span><br><span class="line">    l_name.title()    <span class="comment"># Wrong  these 2 title() are useless.</span></span><br><span class="line">    <span class="built_in">print</span>(f_name + <span class="string">&quot; &quot;</span> + l_name)  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function_name</span>(<span class="params">f_name,l_name</span>):</span><br><span class="line">    format_f = f_name.title()</span><br><span class="line">    format_l = l_name.title()    <span class="comment"># Right.</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;format_f&#125;</span> <span class="subst">&#123;format_l&#125;</span>&quot;</span>)  </span><br><span class="line">function_name(<span class="string">&quot;schUmann&quot;</span>,<span class="string">&quot;hE&quot;</span>)  <span class="comment"># Remember to call the func.</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-Project-Leap-year-check"><a href="#2-Project-Leap-year-check" class="headerlink" title="2.### Project:Leap year check:"></a>2.<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function_1</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="keyword">return</span> text + text</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">function_2</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="keyword">return</span> text.title()</span><br><span class="line"></span><br><span class="line">output = function_2(function_1(<span class="string">&quot;hello&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(output)</span><br></pre></td></tr></table></figure><br>### Project:Leap year check:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">is_leap_year</span>(<span class="params">year</span>):</span><br><span class="line">    <span class="comment"># Write your code here.</span></span><br><span class="line">    <span class="comment"># Don&#x27;t change the function name.</span></span><br><span class="line">    <span class="keyword">if</span> year % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> year % <span class="number">100</span> != <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="literal">True</span>)      <span class="comment"># Wrong! 返回None # 在函数中，print() 只是将结果输出到控制台，而不会将值返回给调用函数或程序的其他部分。函数默认返回 None，因此如果你需要在其他地方使用函数的返回值（例如赋值给变量或进一步计算），print() 就不够用了。</span></span><br><span class="line">    <span class="keyword">elif</span> year % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="literal">False</span>)</span><br><span class="line">is_leap_year(<span class="number">2024</span>)</span><br></pre></td></tr></table></figure></h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">is_leap_year</span>(<span class="params">year</span>):</span><br><span class="line">    <span class="comment"># Write your code here.</span></span><br><span class="line">    <span class="comment"># Don&#x27;t change the function name.</span></span><br><span class="line">    <span class="keyword">if</span> year % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> year % <span class="number">100</span> != <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span>(<span class="literal">True</span>)   <span class="comment"># Right .</span></span><br><span class="line">                       <span class="comment"># No quotation like &quot; return(&#x27;True&#x27;).</span></span><br><span class="line">    <span class="keyword">elif</span> year % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span>(<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span>(<span class="literal">False</span>)</span><br><span class="line">is_leap_year(<span class="number">2024</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Dostrings-to-explain"><a href="#Dostrings-to-explain" class="headerlink" title="Dostrings: to explain"></a>Dostrings: to explain</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">format_name</span>(<span class="params">f_name, l_name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Take a first and last name and format it to return the</span></span><br><span class="line"><span class="string">    title case version of the name.&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em>Question</em> 2:<br>What would you predict to be the result of running the following code?<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">outer_function</span>(<span class="params">a, b</span>):     <span class="comment"># a = 5, b= 10</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_function</span>(<span class="params">c, d</span>):   <span class="comment"># c = 5, b = 10</span></span><br><span class="line">        <span class="keyword">return</span> c + d</span><br><span class="line">    <span class="keyword">return</span> inner_function(a, b)</span><br><span class="line"> </span><br><span class="line">result = outer_function(<span class="number">5</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure></li>
+<li>Answer: 15<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">n1, n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 + n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">substract</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 - n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">multiply</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 * n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">devide</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 / n2</span><br><span class="line"></span><br><span class="line">calculate = &#123;<span class="string">&quot;+&quot;</span>:[add],</span><br><span class="line">             <span class="string">&quot;-&quot;</span>:[substract], <span class="comment"># Wrong don&#x27;t use [] or the &quot;&quot;.</span></span><br><span class="line">             <span class="string">&quot;*&quot;</span>:[multiply],</span><br><span class="line">             <span class="string">&quot;/&quot;</span>:[devide]</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(calculate[<span class="string">&quot;*&quot;</span>](<span class="number">4</span>,<span class="number">8</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">calculate = &#123;<span class="string">&quot;+&quot;</span>:add,</span><br><span class="line">             <span class="string">&quot;-&quot;</span>:substract,  <span class="comment"># Right.</span></span><br><span class="line">             <span class="string">&quot;*&quot;</span>:multiply,</span><br><span class="line">             <span class="string">&quot;/&quot;</span>:devide</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(calculate[<span class="string">&quot;*&quot;</span>](<span class="number">4</span>,<span class="number">8</span>))  <span class="comment"># Attention.</span></span><br><span class="line">``</span><br><span class="line"><span class="comment">## Final project</span></span><br><span class="line"><span class="comment">### Points</span></span><br><span class="line"><span class="number">1.</span> Use *<span class="built_in">float</span>* but <span class="keyword">not</span> *<span class="built_in">int</span>* to enable the decimal calculate.</span><br><span class="line"><span class="number">2.</span> reduce *<span class="keyword">if</span>*:</span><br><span class="line">```py</span><br><span class="line"> goon = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> goon:</span><br></pre></td></tr></table></figure>
+but not<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">goon = <span class="literal">True</span></span><br><span class="line"><span class="keyword">if</span> goon = <span class="literal">True</span>:</span><br><span class="line">    ....</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Preposition"><a href="#Preposition" class="headerlink" title="Preposition"></a>Preposition</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> art <span class="keyword">import</span> logo</span><br><span class="line"><span class="built_in">print</span>(logo)</span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">n1, n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 + n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">substract</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 - n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">multiply</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 * n2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">devide</span>(<span class="params">n1,n2</span>):</span><br><span class="line">    <span class="keyword">return</span> n1 / n2</span><br><span class="line"></span><br><span class="line">calculate = &#123;<span class="string">&quot;+&quot;</span>:add,</span><br><span class="line">             <span class="string">&quot;-&quot;</span>:substract,</span><br><span class="line">             <span class="string">&quot;*&quot;</span>:multiply,</span><br><span class="line">             <span class="string">&quot;/&quot;</span>:devide</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-solutions"><a href="#2-solutions" class="headerlink" title="2 solutions"></a>2 solutions</h3><h2 id="-1"><a href="#-1" class="headerlink" title="-"></a>-<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">restart = <span class="literal">True</span></span><br><span class="line">goon = <span class="literal">False</span></span><br><span class="line"><span class="keyword">while</span> restart == <span class="literal">True</span> <span class="keyword">and</span> goon == <span class="literal">False</span>:</span><br><span class="line">    n1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;What&#x27;s the first number?: &quot;</span>))</span><br><span class="line">    goon = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">while</span> goon:</span><br><span class="line">        choose = <span class="built_in">input</span>(<span class="string">&quot;+\n-\n*\n/\nPick an operation: &quot;</span>)</span><br><span class="line">        n2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;What&#x27;s the next number?: &quot;</span>))</span><br><span class="line">        function = calculate[choose] <span class="comment"># Here use [] not ().</span></span><br><span class="line">        result = function(n1,n2)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;n1&#125;</span><span class="subst">&#123;choose&#125;</span><span class="subst">&#123;n2&#125;</span> = <span class="subst">&#123;result&#125;</span>&quot;</span>)  <span class="comment"># Attention</span></span><br><span class="line">        go_on_or_not = <span class="built_in">input</span>(<span class="string">f&quot;Type &#x27;y&#x27; to continue calculating with <span class="subst">&#123;result&#125;</span>, or type &#x27;n&#x27; to start a new calculation: &quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> go_on_or_not == <span class="string">&quot;y&quot;</span>:</span><br><span class="line">            restart = <span class="literal">False</span></span><br><span class="line">            goon = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> go_on_or_not == <span class="string">&quot;n&quot;</span>:</span><br><span class="line">            restart = <span class="literal">True</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> * <span class="number">20</span>)</span><br></pre></td></tr></table></figure></h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> art</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculator</span>():</span><br><span class="line">    <span class="built_in">print</span>(art.logo) <span class="comment"># Another expresion.</span></span><br><span class="line">    should_accumulate = <span class="literal">True</span></span><br><span class="line">    num1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;What is the first number?: &quot;</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> should_accumulate:</span><br><span class="line">        <span class="keyword">for</span> symbol <span class="keyword">in</span> operations:   <span class="comment">#  For Loop to simplify.</span></span><br><span class="line">            <span class="built_in">print</span>(symbol)</span><br><span class="line">        operation_symbol = <span class="built_in">input</span>(<span class="string">&quot;Pick an operation: &quot;</span>)</span><br><span class="line">        num2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&quot;What is the next number?: &quot;</span>))</span><br><span class="line">        answer = operations[operation_symbol](num1, num2)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;num1&#125;</span> <span class="subst">&#123;operation_symbol&#125;</span> <span class="subst">&#123;num2&#125;</span> = <span class="subst">&#123;answer&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">        choice = <span class="built_in">input</span>(<span class="string">f&quot;Type &#x27;y&#x27; to continue calculating with <span class="subst">&#123;answer&#125;</span>, or type &#x27;n&#x27; to start a new calculation: &quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> choice == <span class="string">&quot;y&quot;</span>:</span><br><span class="line">            num1 = answer</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            should_accumulate = <span class="literal">False</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> * <span class="number">20</span>)</span><br><span class="line">            calculator()   <span class="comment"># Loop itself.</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Py100-Notes/" rel="tag"># Py100 Notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/10/14/100py/Sec12/" rel="prev" title="Sec12:Scope -- Number Guessing Project">
+                  <i class="fa fa-angle-left"></i> Sec12:Scope -- Number Guessing Project
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
